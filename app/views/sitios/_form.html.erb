@@ -1,0 +1,32 @@
+<%= form_with(model: sitio, local: true) do |form| %>
+  <% if sitio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sitio.errors.count, "error") %> prohibited this sitio from being saved:</h2>
+
+      <ul>
+      <% sitio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_area :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ip %>
+    <%= form.text_area :ip %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

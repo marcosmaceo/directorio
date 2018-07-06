@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= link_to @sitio.direccion,@sitio.direccion %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @sitio.descripcion %>
+</p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @sitio.ip %>
+</p>
+
+<%= link_to 'Edit', edit_sitio_path(@sitio) %> |
+<%= link_to 'Back', sitios_path %>
