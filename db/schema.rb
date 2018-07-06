@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_05_172136) do
+ActiveRecord::Schema.define(version: 2018_07_06_231651) do
 
   create_table "sitios", force: :cascade do |t|
     t.string "direccion"
@@ -18,6 +18,15 @@ ActiveRecord::Schema.define(version: 2018_07_05_172136) do
     t.text "ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "password_digest"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
