@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   # get 'sessions/new'
+
+  require 'sidekiq/web'
+
+  mount Sidekiq::Web => "/sidekiq"
+
   root 'welcome#index'
   
   get 'users/new'

@@ -1,7 +1,7 @@
-source "file:/home/maceo/Documents/code/rubygems-updates"
+# source "file:/home/maceo/Documents/code/rubygems-updates"
 source "http://10.6.120.227:8081/repository/rubygems-proxy"
 # source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+# git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.0'
 
@@ -18,7 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'mini_racer', platforms: :ruby
 
-gem 'faker',          '1.7.3'
+#gem 'faker',          '1.7.3'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -27,7 +27,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -68,6 +68,8 @@ gem 'rails-controller-testing'
 
 gem 'will_paginate',           '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
-
-
+gem 'sidekiq'
+gem 'sinatra' #, github: 'sinatra/sinatra'
+# gem 'device'
+# gem 'sidekiq'
 # gem 'rails-controller-testing'
