@@ -4,7 +4,8 @@ class SitiosController < ApplicationController
   # GET /sitios
   # GET /sitios.json
   def index
-    @sitios = Sitio.all
+    # @sitios = Sitio.all
+    @sitios = Sitio.paginate(page: params[:page])
   end
 
   # GET /sitios/1

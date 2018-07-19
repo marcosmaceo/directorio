@@ -2,11 +2,12 @@
 
 <h1>Sitios</h1>
 
+<%= will_paginate %>
+
 <table>
   <thead>
     <tr>
       <th>Direccion</th>
-      <th>Descripcion</th>
       <th>Ip</th>
       <th colspan="3"></th>
     </tr>
@@ -16,16 +17,13 @@
     <% @sitios.each do |sitio| %>
       <tr>
         <td><%= link_to sitio.direccion , sitio.direccion %></td>
-        <td><%= sitio.descripcion %></td>
         <td><%= sitio.ip %></td>
-        <td><%= link_to 'Show', sitio %></td>
-        <td><%= link_to 'Edit', edit_sitio_path(sitio) %></td>
-        <td><%= link_to 'Destroy', sitio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', sitio %></td> 
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Sitio', new_sitio_path %>
+<%= will_paginate %>
+
